@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato:wght@400;900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Components*/
+
+.button {
+    border-radius: 2.125rem;
+    color: white;
+    padding: .75rem 2rem .75rem 2rem;
+    font-weight: 900;
+}
+
+.button-item {
+    display: flex;
+}
+
+.button-primary {
+    background-color: #3693D6;
+    margin-top: 6rem;
+}
+
+.button-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.button-item img {
+    padding-left: .5rem;
+}
+
+
+.container {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 100rem;
+        padding: 0;
+    }
+}
+
+h1 {
+    font-family: 'Calligraffitti';
+    font-size: 8rem;
+    font-weight: 400;
+    text-align: right;
+    color: white;
+    transform: matrix(0.99, -0.16, 0.16, 0.99, 0, 0);
+}
+
+h2 {
+    font-size: 3.25rem;
+    font-family: 'Lato';
+    font-weight: 900;
+    color: #3693D6;
+}
+
+h3 {
+    color: #3693D6;
+    font-size: 2.625rem;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+h1 span {
+    display: block;
+    font-size: 11rem;
+}
+
+p {
+    color: white;
+    font-size: 2rem;
+}
+
+.main-header {
+    /*background-image: image-set (url("/img/Photo\ montagnes.png") 1x, url("/img/Photo\ montagnes@2x.png") 2x);*/
+    background-image: url("/img/Photo\ montagnes.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8.25rem;
+}
+
+/*nav*/
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 8.25rem;
+}
+
+.main-nav-list {
+    display: flex;
+}
+
+.nav-link {
+    padding: .75rem 2rem .75rem 2rem;
+}
+
+.nav-link:hover {
+    background-color: #FFFFFF;
+    border-radius: 2.125rem;
+    color: #3693D6;
+} 
+
+.menu-item:first-child {
+    position: relative;
+}
+
+.menu-item:first-child::after {
+    background-color: white;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    width: 2.625rem;
+}
+
+/* Main */
+
+.About-content {
+    background-color: #3693D6;
+}
+
+.About-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 18.5rem;
+    padding-right: 18.5rem;
+    text-align: center;
+}
+
+.About-item h2 {
+    color: white;
+}
+
+.About-item p {
+    padding-top: 3.25rem;
+    font-size: 2.625rem;
+    font-weight: 400;
+}
+
+.Work-contain > h2 {
+    display: flex;
+    justify-content: center;
+    color: #3693D6;
+    padding-top: 7.25rem;
+    padding-bottom: 7.25rem;
+}
+
+.Work-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1.25rem;
+}
+
+.work-img:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.work-img:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.work-img:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.work-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-image: url("/img/Filtre\ bleu.svg"), url("/img/action-active-cold-2433353.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-item h2 {
+    color: white;
+}
+
+.work-item p {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.testimonial-img {
+    margin-top: 3.25rem;
+    margin-bottom: 3.25rem;
+}
+
+.testimonial-content p{
+    color: #3693D6;
+    line-height: 2;
+    text-align: center;
+    margin-top: 2.625rem;
+}
+
+.main-footer {
+    background-color: #3693D6;
+}
+
+.footer-content {
+    display: grid;
+    align-items: center;
+    font-size: 1.375rem;
+    grid-template-columns: repeat(4 , 1fr);
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.footer-content h3 {
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 900;
+}
+
+.location-item span {
+    display: block;
+}
+
+.contact-content {
+    align-self: baseline;
+}
+
+.phone {
+    color: white;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 1366px) and (max-width: 1600px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    
+    h1 span {
+        display: block;
+        font-size: 8.375rem;
+    }
+
+    .container {
+        max-width: 75rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    h1 span {
+        display: block;
+        font-size: 6.25rem;
+    }
+
+    h2 {
+        font-size: 2.625rem;
+    }
+
+    h3 {
+        font-size: 2.25rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        max-width: 62rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+        padding: .625rem 1.25rem .625rem 1.25rem;
+    }
+
+    .menu-item:first-child::after {
+        width: 1.875rem;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    .button-primary {
+        font-size: 1.5rem;
+    }
+
+    .button-secondary {
+        font-size: 1.125rem;
+    }
+
+    .About-item {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .About-item p {
+        font-size: 1.75rem;
+        padding-top: 2.5rem;
+    }
+
+    .work-item {
+        padding-left: 5.25rem;
+        padding-right: 5.25rem;
+        line-height: 1;
+    }
+
+    .footer-content {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .footer-content h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .main-adress {
+        padding-left: 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    h1 span {
+        display: block;
+        font-size: 6.25rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 48rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: .5rem 1rem .5rem 1rem;
+    }
+
+    .menu-item:first-child::after {
+        width: 1.375rem;
+    }
+
+    .logo img {
+        height: 2.25rem;
+    }
+
+    .button-primary {
+        font-size: 1.5rem;
+    }
+
+    .button-secondary {
+        font-size: 0.875rem;
+    }
+
+    .About-item {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .About-item p {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .work-item {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        line-height: 1;
+    }
+
+    .Work-contain > h2 {
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+
+    .work-item p {
+        font-size: 1rem;
+    }
+
+    .testimonial-content {
+        margin-top: 3.75rem;
+        margin-bottom: 3.75rem;
+        padding-left: 8.25rem;
+        padding-right: 8.25rem;
+    }
+
+    .testimonial-img {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-content p{
+        margin-top: 1.5rem;
+    }
+
+    .footer-content {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .footer-content h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .main-adress {
+        padding-left: 1rem;
+    }
+
+    .social-item img {
+        height: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    h1 span {
+        display: block;
+        font-size: 6.25rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 48rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main-header {
+        background-image: url("/img/Photo\ montagnes\ small.png");
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: .5rem 1rem .5rem 1rem;
+    }
+
+    .menu-item:first-child::after {
+        width: 1.375rem;
+    }
+
+    .logo img {
+        height: 2.25rem;
+    }
+
+    .button-primary {
+        font-size: 1.5rem;
+    }
+
+    .button-secondary {
+        font-size: 0.875rem;
+    }
+
+    .About-item {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .About-item p {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .work-item {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        line-height: 1;
+    }
+
+    .Work-contain > h2 {
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+
+    .work-item p {
+        font-size: 1rem;
+    }
+
+    .Work-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    
+    .work-img:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .work-img:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background-image: url("/img/adorable-animal-breed-small.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .work-img:nth-child(2) img {
+        display: none;
+    }
+
+    .testimonial-content {
+        margin-top: 3.75rem;
+        margin-bottom: 3.75rem;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+
+    .testimonial-img {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-content p{
+        margin-top: 1.5rem;
+    }
+
+    .footer-content {
+        font-size: 1rem;
+        line-height: 1.8;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap: 1.25rem;
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+
+    .logo-sub {
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .social-content {
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .footer-content h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .main-adress {
+        padding-left: 6.5rem;
+    }
+
+    .social-item {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .social-item img {
+        height: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h1 span {
+        display: block;
+        font-size: 2.875rem;
+    }
+
+    .main-nav {
+        padding-bottom: 5rem;
+    }
+
+    .logo img {
+        height: 1.5rem;
+    }
+
+    .Work-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5 , 1fr);
+        grid-gap: 1rem;
+    }
+
+    .work-img > * {
+        min-height: 18.125rem
+    }
+
+    .work-item {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 1rem;
+    }
+
+    .work-item p {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .work-img:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .work-img:nth-child(1) img {
+        max-width: 100%;
+    }
+    
+    .work-img:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .main-adress {
+        padding-left: 0;
+    }
+}

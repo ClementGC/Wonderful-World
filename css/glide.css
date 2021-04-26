@@ -1,0 +1,41 @@
+.glide__slides {
+    display: flex;
+}
+
+.glide__bullets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7.25rem;
+}
+  
+.glide__bullet {
+    background-color: #E2E2E2;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 25px;
+    padding: 0;
+    border: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin: 0.75rem 0.75rem;
+}
+
+.glide__bullet:focus {
+    outline: none; 
+}
+
+.glide__bullet:hover, .glide__bullet:focus {
+    background-color: #9BC0FF; 
+}
+      
+.glide__bullet--active {
+    background-color: #9BC0FF; 
+}
+
+@media screen and (max-width: 768px) {
+    .glide__bullets {
+        margin-bottom: 3.75rem;
+    }
+}

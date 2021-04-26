@@ -1,0 +1,89 @@
+/* Mobile Menu */
+.main-nav__toggler {
+    display: grid;
+    gap: .3rem;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.main-nav__bar {
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 1.5rem;
+    background-color: #FFFFFF;
+    transition: .3s;
+}
+
+/* First element rotation when aria-expanded : true without [aria-expanded] */
+.main-nav__toggler[aria-expanded="true"] .main-nav__bar:first-child {
+    transform: rotate(30deg);
+}
+
+/* Opacity 0 on the middle element when aria-expanded : [aria-expanded] true*/
+.main-nav__toggler[aria-expanded="true"] .main-nav__bar:not(:first-child):not(:last-child) {
+    opacity: 0;
+}
+
+/* Last element rotation when aria-expanded : [aria-expanded] true*/
+.main-nav__toggler[aria-expanded="true"] .main-nav__bar:last-child {
+    transform: rotate(-30deg);
+}
+
+/* Set transform origin */
+.main-nav__bar:first-child {
+    transform-origin: left top;
+}
+
+.main-nav__bar:last-child {
+    transform-origin: left bottom;
+}
+
+/* reset origin transformation */
+
+.main-nav__toggler[aria-expanded="true"] + .main-nav-list {
+    transform: translateX(0);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .main-nav__toggler {
+        display: none;
+    } 
+}
+
+@media screen and  (max-width: 768px) {
+    .main-nav-list {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        z-index: 3;
+        top: 8.6rem;
+        left: 0;
+        right: 0;
+        background-color: white;
+        transition: 0.5s;
+        transform: translateX(-200%);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1.6rem 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: .3s;
+        color: #3693D6;
+    }
+
+    .nav-link:hover {
+        background-color:#3693D6;
+        border-radius: 0;
+        color: white;
+    } 
+
+    .menu-item:first-child::after {
+        display: none;
+    }
+}
